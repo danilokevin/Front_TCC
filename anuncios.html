@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentaria</title>
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1a1eee16ef.js" crossorigin="anonymous"></script>
+
+    <!-- ProgressBar -->
+    <script src="JS/progressbar.min.js"></script>
+
+    <!-- Parallax -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+<body>
+      <header>
+        <div class="container" id="nav-container">
+          <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+            <a class="navbar-brand" href="index.html">
+              <img id="logo" src="img/hdcagency_logo.svg" alt="hDC Agency"> Ferramentaria
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" id="home-menu" href="#mainSlider">Home</span></a>
+                <a class="nav-item nav-link" id="about-menu" href="#about-area">Anúncios</a>
+                <a class="nav-item nav-link" id="portfolio-menu" href="#portfolio-area">Buscar</a>
+                <a class="nav-item nav-link" id="contact-menu" href="#contact-area">Mensagens</a>
+                <a class="nav-item nav-link" id="login-menu" href="login.html">Sair</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div id="about-ferramenta" style="margin-top: 10px;">
+            <div class="container" >
+                <div class="row">
+                  <div class="col-md-12" >
+                    <div id="team-area">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-12">
+                              <h3 class="main-title">Meus Anúncios</h3>
+                            </div>
+                            <div class="col-12" style="margin-bottom: 20px;">
+                                <button class="main-btn" id="call-btn" data-toggle="modal" data-target="#myModal">Novo</button>
+                              </div>
+                              <div class="col-md-2" style="margin-bottom: 15px;">
+                                <div class="card">
+                                  <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Karina Katarina</h5>
+                                    <p class="card-text">UX/UI Designer</p>
+                                    <div style="text-align: center;">
+                                        <a href="#" class="btn"><i class="fas fa-pen-to-square"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-plus"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2" style="margin-bottom: 15px;">
+                                <div class="card">
+                                  <img src="img/profile2.jpg" class="card-img-top" alt="Imagem de Perfil 2">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Maria Mariana</h5>
+                                    <p class="card-text">SEO Consultant</p>
+                                    <div style="text-align: center;">
+                                        <a href="#" class="btn"><i class="fas fa-pen-to-square"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-plus"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2" style="margin-bottom: 15px;">
+                                <div class="card">
+                                  <img src="img/profile3.jpg" class="card-img-top" alt="Imagem de Perfil 3">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Paul Baker</h5>
+                                    <p class="card-text">Project Manager</p>
+                                    <div style="text-align: center;">
+                                        <a href="#" class="btn"><i class="fas fa-pen-to-square"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-plus"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="col-md-2" style="margin-bottom: 15px;">
+                                <div class="card">
+                                  <img src="img/profile2.jpg" class="card-img-top" alt="Imagem de Perfil 2">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Maria Mariana</h5>
+                                    <p class="card-text">SEO Consultant</p>
+                                    <div style="text-align: center;">
+                                        <a href="#" class="btn"><i class="fas fa-pen-to-square"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-plus"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2" style="margin-bottom: 15px;">
+                                <div class="card">
+                                  <img src="img/profile3.jpg" class="card-img-top" alt="Imagem de Perfil 3">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Paul Baker</h5>
+                                    <p class="card-text">Project Manager</p>
+                                    <div style="text-align: center;">
+                                        <a href="#" class="btn"><i class="fas fa-pen-to-square"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-plus"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2" style="margin-bottom: 15px;">
+                                <div class="card">
+                                  <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Karina Katarina</h5>
+                                    <p class="card-text">UX/UI Designer</p>
+                                    <div style="text-align: center;">
+                                        <a href="#" class="btn"><i class="fas fa-pen-to-square"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-plus"></i></a>
+                                        <a href="#" class="btn"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="myModalLabel">Nova Ferramenta</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                            <div class="form-group row ">
+                                <label class="control-label col-md-3 col-sm-3 ">Nome</label>
+                                <div class="col-md-9 col-sm-9 ">
+                                    <input type="text" class="form-control" placeholder="Nome" id="nome">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 ">Descrição <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9 col-sm-9 ">
+                                    <textarea class="form-control" rows="3" placeholder="Descrição" id="descricao"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 ">Tensão</label>
+                                <div class="col-md-9 col-sm-9 ">
+                                    <select class="form-control" id="tensao">
+                                        <option></option>
+                                        <option>110V</option>
+                                        <option>200V</option>
+                                        <option>Não se aplica</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 ">Modalidade</label>
+                                <div class="col-md-9 col-sm-9 ">
+                                    <select class="form-control" id="modalidade">
+                                        <option></option>
+                                        <option>Residencial</option>
+                                        <option>Industrial</option>
+                                        <option>Outro</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 ">Disponibilidade</label>
+                                <div class="col-md-9 col-sm-9 ">
+                                    <select class="form-control" id="disponibilidade">
+                                        <option></option>
+                                        <option>Aluguel</option>
+                                        <option>Venda</option>
+                                        <option>Doação</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>                     
+
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 ">Imagem</label>
+                                <div class="col-md-9 col-sm-9 ">
+                                    <div class="">
+                                        <label>
+                                            <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" id="imagem"/>
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-9 col-sm-9 offset-md-3 text-center">
+                                    <button type="reset" class="btn btn-primary">Reset</button>
+                                    <button type="button" class="btn btn-success" onclick="adicionarFerramenta();">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+      </main>
+</body>
