@@ -74,16 +74,14 @@
                     <form action="">
                         <p>Dados Pessoais</p>
                         <div class="row">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="email@email.com">
-                            <input type="text" class="form-control" id="inputNome" placeholder="Nome">
-                            <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-                            <input type="text" class="form-control" id="inputCPF" placeholder="CPF">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="email@email.com" required>
+                            <input type="text" class="form-control" id="inputNome" placeholder="Nome" required>
 
                             <div class="col">
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                                <input type="password" minlength="6" class="form-control" id="inputPassword4" placeholder="Senha" required>
                             </div>
                             <div class="col">
-                                <input type="password" class="form-control" id="inputConfirmarSenha" placeholder="Confirmar Senha">
+                                <input type="password" minlength="6" class="form-control" id="inputConfirmarSenha" placeholder="Confirmar Senha" required>
                             </div>
                         </div>
                         
@@ -95,10 +93,47 @@
                             <input type="text" class="form-control" id="inputComplemento" placeholder="Complemento">
                             <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
                             <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+                            
                             <select id="inputUF" class="form-control">
-                                <option selected>UF</option>
-                                <option>...</option>
-                            </select>
+                              <option value="">Selecione</option>
+                              <option value="AC">AC</option>
+                              <option value="AL">AL</option>
+                              <option value="AP">AP</option>
+                              <option value="AM">AM</option>
+                              <option value="BA">BA</option>
+                              <option value="CE">CE</option>
+                              <option value="DF">DF</option>
+                              <option value="ES">ES</option>
+                              <option value="GO">GO</option>
+                              <option value="MA">MA</option>
+                              <option value="MS">MS</option>
+                              <option value="MT">MT</option>
+                              <option value="MG">MG</option>
+                              <option value="PA">PA</option>
+                              <option value="PB">PB</option>
+                              <option value="PR">PR</option>
+                              <option value="PE">PE</option>
+                              <option value="PI">PI</option>
+                              <option value="RJ">RJ</option>
+                              <option value="RN">RN</option>
+                              <option value="RS">RS</option>
+                              <option value="RO">RO</option>
+                              <option value="RR">RR</option>
+                              <option value="SC">SC</option>
+                              <option value="SP">SP</option>
+                              <option value="SE">SE</option>
+                              <option value="TO">TO</option>
+                              </select>
+                        </div>
+
+                        <p>Contato</p>
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" id="inputDDD" placeholder="DDD">
+                          </div>
+                          <div class="col">
+                            <input type="text" class="form-control" id="inputTelefone" placeholder="Telefone">
+                          </div>
                         </div>
                         
                         <div class="row">
@@ -109,7 +144,7 @@
                             </label>
                           </div>
                         </div>
-                        <input type="submit" class="main-btn" onclick="acionarAlerta()">
+                        <input type="button" class="main-btn" onclick="salvarDados()" value="Enviar">
                     </form>
                   </div>
               </div>
