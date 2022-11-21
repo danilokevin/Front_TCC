@@ -8,6 +8,11 @@ $(function() {
     getFerramentas(usuario.idUsuario, token.token)
     getAnuncios(usuario.idUsuario, token.token)
 
+    if (ferramentas.length != 0) {
+        montarCardsFerramentas()
+    }
+    
+
 });
 
 function montarCardsFerramentas() {
@@ -148,6 +153,17 @@ function anuncioFerramenta(idFerramenta, nomeFerramenta) {
         .then(data => {
             if (data) {
                 alert(data.message)
+                //console.log(data.message)
+                localStorage.removeItem("anuncios")
+                getAnuncios(usuario.idUsuario, token.token)
+                
+                //var idAnuncioInt = data.message.slice(20, data.message.length)
+                //console.log(idAnuncioInt)
+                //body.ferramentaId = parseInt(idAnuncioInt)
+
+                //anuncios.push(body)
+                //localStorage.setItem("anuncios", JSON.stringify(anuncios))
+                //montarCardsAnuncios()
             } else {
                 alert("Falha ao anunciar ferramenta")
                 
@@ -155,6 +171,8 @@ function anuncioFerramenta(idFerramenta, nomeFerramenta) {
         })
     })
     .catch(e => console.log(e.message))
+
+    
 
 }
 
@@ -186,7 +204,9 @@ function montarCardsAnuncios() {
     document.getElementById('call-btn').style.visibility = "hidden";
     boxCards = document.getElementById("boxCards")
     boxCards.innerHTML = ""
+    anuncios = JSON.parse(localStorage.getItem("anuncios"))
     
+
     for (let i=0; i < anuncios.length; i++){
         boxCards.innerHTML += cardsAnuncios(anuncios[i])
     }
