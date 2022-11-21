@@ -4,7 +4,7 @@ function salvarDados() {
         email: document.getElementById("inputEmail").value,
         senha: document.getElementById("inputPassword4").value,
         endereco: {
-            logradouro: document.getElementById("inputLogradouro").value,
+            logradouro: document.getElementById("inputLogradouro").value + ", " + document.getElementById("inputNumero").value,
             complemento: document.getElementById("inputComplemento").value,
             bairro: document.getElementById("inputBairro").value,
             cidade: document.getElementById("inputCidade").value,
@@ -42,6 +42,7 @@ function cadastrarUsuario(body){
             //usuario = new Usuario(data)
             if (data.message) {
                 alert("Usuario Cadastrado")
+                window.location.href = "http://127.0.0.1:5500/login.html"
             } else {
                 alert('Erro')
             }

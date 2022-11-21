@@ -1,3 +1,12 @@
+$(function() {
+    
+    localStorage.removeItem("ferramentas")
+    localStorage.removeItem("usuario")
+    localStorage.removeItem("token")
+    
+});
+
+
 function logarUsuario() {
     var email = document.getElementById("emailUsuario").value;
     var senha = document.getElementById("senhaUsuario").value;

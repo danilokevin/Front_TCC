@@ -60,16 +60,24 @@
                   <div class="col-md-12" >
                     <div id="team-area">
                         <div class="container">
-                          <div class="row" id="boxFerramentas">
+                          <div class="row" >
                             <div class="col-12">
-                              <h3 class="main-title">Meus Anúncios</h3>
+                                
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary" onclick="montarCardsFerramentas()">
+                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Minhas Ferramentas
+                                    </label>
+                                    <label class="btn btn-secondary" onclick="montarCardsAnuncios()">
+                                      <input type="radio" name="options" id="option2" autocomplete="off"> Meus Anúncios
+                                    </label>
+                                  </div>
                             </div>
-                            <div class="col-12" style="margin-bottom: 20px;">
-                                <button class="main-btn" id="call-btn" data-toggle="modal" data-target="#myModal">Novo</button>
-                              </div>
+                            <div class="col-12" style="margin-bottom: 20px; margin-top: 30px;">
+                                <button class="main-btn" id="call-btn" data-toggle="modal" data-target="#myModal"  onclick="limparCampos()">Novo</button>
+                            </div>
                               
                               
-                              <div >
+                              <div class="row" id="boxCards">
                                 
 
                               </div>
@@ -99,36 +107,33 @@
                             <div class="form-group row ">
                                 <label class="control-label col-md-3 col-sm-3 ">Nome</label>
                                 <div class="col-md-9 col-sm-9 ">
-                                    <input type="text" class="form-control" placeholder="Nome" id="nome">
+                                    <input type="text" class="form-control" placeholder="Nome" id="inputNome">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 ">Descrição <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 ">Descrição<span class="required"></span>
                                 </label>
                                 <div class="col-md-9 col-sm-9 ">
-                                    <textarea class="form-control" rows="3" placeholder="Descrição" id="descricao"></textarea>
+                                    <textarea class="form-control" rows="3" placeholder="Descrição da Ferramenta e Observações" id="inputDescricao"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 ">Tensão</label>
                                 <div class="col-md-9 col-sm-9 ">
-                                    <select class="form-control" id="tensao">
-                                        <option></option>
-                                        <option>110V</option>
-                                        <option>200V</option>
+                                    <select class="form-control" id="inputTensao">
+                                        <option>V110</option>
+                                        <option>V200</option>
                                         <option>Não se aplica</option>
-                                        
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 ">Modalidade</label>
                                 <div class="col-md-9 col-sm-9 ">
-                                    <select class="form-control" id="modalidade">
-                                        <option></option>
-                                        <option>Residencial</option>
-                                        <option>Industrial</option>
+                                    <select class="form-control" id="inputModalidade">
+                                        <option>RESIDENCIAL</option>
+                                        <option>INDUSTRIAL</option>
                                         <option>Outro</option>
                                         
                                     </select>
@@ -138,11 +143,11 @@
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 ">Disponibilidade</label>
                                 <div class="col-md-9 col-sm-9 ">
-                                    <select class="form-control" id="disponibilidade">
-                                        <option></option>
-                                        <option>Aluguel</option>
-                                        <option>Venda</option>
-                                        <option>Doação</option>
+                                    <select class="form-control" id="inputDisponibilidade">
+                                        <option>selecione</option>
+                                        <option>ALUGUEL</option>
+                                        <option>VENDA</option>
+                                        <option>DOAÇÃO</option>
                                         
                                     </select>
                                 </div>
@@ -163,7 +168,7 @@
                             <div class="form-group">
                                 <div class="col-md-9 col-sm-9 offset-md-3 text-center">
                                     <button type="reset" class="btn btn-primary">Reset</button>
-                                    <button type="button" class="btn btn-success" onclick="adicionarFerramenta();">Submit</button>
+                                    <button type="button" class="btn btn-success" onclick="adicionarFerramenta();">Adicionar</button>
                                 </div>
                             </div>
                         </form>
