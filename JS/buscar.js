@@ -70,7 +70,7 @@ function cardsFerramentasAnunciadas(ferramenta){
     return `
     <div class="col-md-2 cardsFerramentasAnunciadas" style="margin-bottom: 15px;">
         <div class="card">
-            <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+            <img src="img/proj5.jpg" class="card-img-top" alt="Imagem de Perfil 4">
             <div class="card-body">
                 <h5 class="card-title">${ferramenta.nomeFerramenta}</h5>  
                 <div style="text-align: center;">

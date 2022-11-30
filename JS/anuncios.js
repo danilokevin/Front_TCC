@@ -1,18 +1,16 @@
 var usuario = JSON.parse(localStorage.getItem("usuario")) 
 var token = JSON.parse(localStorage.getItem("token"))
-var ferramentas = JSON.parse(localStorage.getItem("ferramentas"))
-var anuncios = JSON.parse(localStorage.getItem("anuncios"))
+
+var ferramentas = {}//JSON.parse(localStorage.getItem("ferramentas"))
+var anuncios = {}//JSON.parse(localStorage.getItem("anuncios"))
 
 $(function() {
     
     getFerramentas(usuario.idUsuario, token.token)
     getAnuncios(usuario.idUsuario, token.token)
 
-    if (ferramentas.length != 0) {
-        montarCardsFerramentas()
-    }
     
-
+    
 });
 
 function montarCardsFerramentas() {
@@ -42,6 +40,8 @@ function getFerramentas(idUsuario, token) {
         .then(data => {
             if (data) {
                 localStorage.setItem("ferramentas", JSON.stringify(data))
+                ferramentas = JSON.parse(localStorage.getItem("ferramentas"))
+                montarCardsFerramentas()
             } else {
                 alert("Falha ao capturar ferramentas")
             }
@@ -86,7 +86,7 @@ function cardsFerramentas(ferramenta){
     return `
     <div class="col-md-2" style="margin-bottom: 15px; id="${ferramenta.idFerramenta}">
         <div class="card">
-            <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+            <img src="img/proj4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
             <div class="card-body">
                 <h5 class="card-title">${ferramenta.nome}</h5> 
                 <p class="card-text">${ferramenta.descricao}</p> 
@@ -191,6 +191,7 @@ function getAnuncios(idUsuario, token) {
         .then(data => {
             if (data) {
                 localStorage.setItem("anuncios", JSON.stringify(data))
+                anuncios = JSON.parse(localStorage.getItem("anuncios"))
             } else {
                 alert("Falha ao capturar anúncios")
             }
@@ -217,7 +218,7 @@ function cardsAnuncios(anuncio){
     return `
     <div class="col-md-2" style="margin-bottom: 15px;">
         <div class="card">
-            <img src="img/profile4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+            <img src="img/proj1.jpg" class="card-img-top" alt="Imagem de Perfil 4">
             <div class="card-body">
                 <h5 class="card-title">${anuncio.nomeFerramenta}</h5> 
                 <p class="card-text">${anuncio.descricaoFerramenta}</p> 

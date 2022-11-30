@@ -3,7 +3,9 @@ $(function() {
     localStorage.removeItem("ferramentas")
     localStorage.removeItem("usuario")
     localStorage.removeItem("token")
-    
+    localStorage.removeItem("ferramentasAnunciadas")
+    localStorage.removeItem("idAnuncioVisualizar")
+    localStorage.removeItem("anuncios")
 });
 
 
