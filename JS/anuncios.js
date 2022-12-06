@@ -35,7 +35,7 @@ function getFerramentas(idUsuario, token) {
         }
     };
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/ferramentas/proprietario/${idUsuario}`, options)
+    fetch(`http://localhost:8080/ferramentas/proprietario/${idUsuario}`, options)
     .then(response => {response.json()
         .then(data => {
             if (data) {
@@ -62,7 +62,7 @@ function postFerramenta(body) {
         body: JSON.stringify(body)
     };
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/ferramentas`, options)
+    fetch(`http://localhost:8080/ferramentas`, options)
     .then(response => {response.json()
         .then(data => {
             if (data) {
@@ -148,7 +148,7 @@ function anuncioFerramenta(idFerramenta, nomeFerramenta) {
         body: JSON.stringify(body)
     };
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/anuncios`, options)
+    fetch(`http://localhost:8080/anuncios`, options)
     .then(response => {response.json()
         .then(data => {
             if (data) {
@@ -186,7 +186,7 @@ function getAnuncios(idUsuario, token) {
         }
     };
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/anuncios/proprietario/${idUsuario}`, options)
+    fetch(`http://localhost:8080/anuncios/proprietario/${idUsuario}`, options)
     .then(response => {response.json()
         .then(data => {
             if (data) {

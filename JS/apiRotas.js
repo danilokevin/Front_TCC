@@ -1,7 +1,7 @@
 //export default {apiRotas}
 
 //export function apiRotas() {
-    //this.pesquisarPorId = "https://ferramentaria-backend.herokuapp.com/usuarios/";
-    //this.pesquisarPorEmail = "https://ferramentaria-backend.herokuapp.com/usuarios/email/";
+    //this.pesquisarPorId = "http://localhost:8080/usuarios/";
+    //this.pesquisarPorEmail = "http://localhost:8080/usuarios/email/";
 //}
 

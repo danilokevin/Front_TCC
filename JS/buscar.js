@@ -21,7 +21,7 @@ function getFerramentas(idUsuario, token) {
         }
     };
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/anuncios?pagina=0&qtd=100`, options)
+    fetch(`http://localhost:8080/anuncios?pagina=0&qtd=100`, options)
     .then(response => {response.json()
         .then(data => {
             if (data) {

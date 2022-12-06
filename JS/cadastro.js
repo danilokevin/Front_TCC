@@ -36,7 +36,7 @@ function cadastrarUsuario(body){
     };
 
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/usuarios`, options)
+    fetch("http://localhost:8080/usuarios", options)
     .then(response => {response.json()
         .then(data => {
             //usuario = new Usuario(data)

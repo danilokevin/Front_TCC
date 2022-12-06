@@ -34,7 +34,7 @@ function buscarUsuarioEmail(emailUsuario, senha){
     };
 
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/auth`, options)
+    fetch(`http://localhost:8080/auth`, options)
     .then(response => {response.json()
         .then(data => {
             //usuario = new Usuario(data)
@@ -60,7 +60,7 @@ function armazenarUsuario(token, email) {
         }
     };
 
-    fetch(`https://ferramentaria-backend.herokuapp.com/usuarios/email/${email}`, options)
+    fetch(`http://localhost:8080/usuarios/email/${email}`, options)
     .then(response => {response.json()
         .then(data => {
             if (data) {
@@ -75,4 +75,4 @@ function armazenarUsuario(token, email) {
     
 }
 
-//https://ferramentaria-backend.herokuapp.com/usuarios/email/${emailUsuario}
+//http://localhost:8080/usuarios/email/${emailUsuario}
