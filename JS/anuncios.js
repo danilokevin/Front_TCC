@@ -86,7 +86,7 @@ function cardsFerramentas(ferramenta){
     return `
     <div class="col-md-2" style="margin-bottom: 15px; id="${ferramenta.idFerramenta}">
         <div class="card">
-            <img src="img/proj4.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+            <img src="${ferramenta.foto}" class="card-img-top" alt="Imagem de Perfil 4">
             <div class="card-body">
                 <h5 class="card-title">${ferramenta.nome}</h5> 
                 <p class="card-text">${ferramenta.descricao}</p> 
@@ -108,7 +108,9 @@ function adicionarFerramenta(){
         tensao: document.getElementById("inputTensao").value,
         modalidade: document.getElementById("inputModalidade").value,
         disponibilidade: document.getElementById("inputDisponibilidade").value,
-        proprietarioId: usuario.idUsuario
+        proprietarioId: usuario.idUsuario,
+        foto: document.getElementById("foto").files[0].name
+
     }
 
     postFerramenta(body)
@@ -123,6 +125,8 @@ function preencherCampos(id){
     document.getElementById("inputTensao").value = edit.tensao
     document.getElementById("inputModalidade").value = edit.modalidade
     document.getElementById("inputDisponibilidade").value = edit.disponibilidade
+
+    console.log(edit)
 }
 
 function limparCampos() {
@@ -218,7 +222,7 @@ function cardsAnuncios(anuncio){
     return `
     <div class="col-md-2" style="margin-bottom: 15px;">
         <div class="card">
-            <img src="img/proj1.jpg" class="card-img-top" alt="Imagem de Perfil 4">
+            <img src="${anuncio.foto}" class="card-img-top" alt="Imagem de Perfil 4">
             <div class="card-body">
                 <h5 class="card-title">${anuncio.nomeFerramenta}</h5> 
                 <p class="card-text">${anuncio.descricaoFerramenta}</p> 

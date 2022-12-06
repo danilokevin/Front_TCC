@@ -15,9 +15,7 @@ function salvarDados() {
             ddd: document.getElementById("inputDDD").value,
             numero: document.getElementById("inputTelefone").value
         },
-        foto: {
-            url: "url"
-        }
+        foto: "url"
     }
 
     cadastrarUsuario(body);
@@ -39,12 +37,12 @@ function cadastrarUsuario(body){
     fetch("http://localhost:8080/usuarios", options)
     .then(response => {response.json()
         .then(data => {
-            //usuario = new Usuario(data)
-            if (data.message) {
-                alert("Usuario Cadastrado")
+            console.log(data)
+            if (response.status == 201) {
+                alert("Usuario Cadastrado com Sucesso")
                 window.location.href = "http://127.0.0.1:5500/login.html"
             } else {
-                alert('Erro')
+                alert('Favor preencher todos os campos!')
             }
             
         })

@@ -53,25 +53,33 @@
       </header>
       <main>
         <div id="about-ferramenta" style="margin-top: 10px;">
-            <div class="container" >
+            <div style="margin: 150px;">
                 <div class="row">
                   <div class="col-md-12" >
                     <div id="team-area">
-                        <div class="container">
+                        <div style="margin-top: 50px;">
                           <div class="row" >
                             <div class="col-12">
-                                
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary" onclick="montarCardsFerramentas()">
-                                      <input type="radio" name="options" id="option1" autocomplete="off" checked> Minhas Ferramentas
-                                    </label>
-                                    <label class="btn btn-secondary" onclick="montarCardsAnuncios()">
-                                      <input type="radio" name="options" id="option2" autocomplete="off"> Meus Anúncios
-                                    </label>
+                                    <div style="margin-right: 150px;">
+                                        <label class="btn btn-secondary" onclick="montarCardsFerramentas()">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Minhas Ferramentas
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label class="btn btn-secondary" onclick="montarCardsAnuncios()">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Meus Anúncios
+                                          </label>
+                                    </div>
                                   </div>
                             </div>
-                            <div class="col-12" style="margin-bottom: 20px; margin-top: 30px;">
-                                <button class="main-btn" id="call-btn" data-toggle="modal" data-target="#myModal"  onclick="limparCampos()">Novo</button>
+
+                            <div>
+                                <h4 style="margin-top: 40px;">Aqui você poderá cadastrar suas ferramentas e publicá-las como anúncios.</h4>
+                                <h4 style="margin-top: 40px;">Clique em NOVO e cadastre sua ferramenta: </h4>
+                            </div>
+                            <div class="col-12" style="margin-bottom: 20px; margin-top: 20px;">
+                                <button style="margin-top: 20px;" class="main-btn" id="call-btn" data-toggle="modal" data-target="#myModal"  onclick="limparCampos()">Novo</button>
                             </div>
                               
                               
@@ -120,9 +128,9 @@
                                 <label class="control-label col-md-3 col-sm-3 ">Tensão</label>
                                 <div class="col-md-9 col-sm-9 ">
                                     <select class="form-control" id="inputTensao">
-                                        <option>V110</option>
-                                        <option>V200</option>
-                                        <option>Não se aplica</option>
+                                        <option value="V110">110 v</option>
+                                        <option value="V200">200 v</option>
+                                        <option value="NAO_APLICA">Não se aplica</option>
                                     </select>
                                 </div>
                             </div>
@@ -156,7 +164,7 @@
                                 <div class="col-md-9 col-sm-9 ">
                                     <div class="">
                                         <label>
-                                            <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" id="imagem"/>
+                                            <input id="foto" type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" id="imagem"/>
                                         </label>
                                     </div>
                                     
@@ -176,5 +184,4 @@
         </div>
       </main>
     </body>
-    <script src="sweetalert2.all.min.js"></script>
 </html>
